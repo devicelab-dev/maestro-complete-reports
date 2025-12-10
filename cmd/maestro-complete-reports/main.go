@@ -1,23 +1,12 @@
 package main
 
 import (
-	"encoding/json"
 	"flag"
 	"fmt"
-	"net/http"
 	"os"
 
 	"github.com/devicelab-dev/maestro-complete-reports/internal/maestro"
 )
-
-const (
-	// TODO: Replace with actual server endpoint that returns R2 temp URL
-	serverEndpoint = "PLACEHOLDER_SERVER_URL"
-)
-
-type DownloadResponse struct {
-	URL string `json:"url"`
-}
 
 func main() {
 	printBanner()
@@ -88,16 +77,9 @@ func runSetup() {
 	}
 	fmt.Printf("Backup created at: %s\n", backupPath)
 
-	fmt.Println("Fetching download URL from server...")
-	downloadURL, err := getDownloadURL()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Error fetching download URL: %v\n", err)
-		os.Exit(1)
-	}
-
 	fmt.Println("Downloading and replacing JARs...")
-	if err := m.DownloadAndReplaceJars(downloadURL); err != nil {
-		fmt.Fprintf(os.Stderr, "Error replacing JARs: %v\n", err)
+	if err := m.DownloadAndReplaceJars(); err != nil {
+		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
 		os.Exit(1)
 	}
 
@@ -125,27 +107,4 @@ func runRestore() {
 
 	fmt.Println("Restore complete!")
 	printPromo()
-}
-
-func getDownloadURL() (string, error) {
-	resp, err := http.Get(serverEndpoint)
-	if err != nil {
-		return "", fmt.Errorf("failed to contact server: %w", err)
-	}
-	defer resp.Body.Close()
-
-	if resp.StatusCode != http.StatusOK {
-		return "", fmt.Errorf("server returned status: %s", resp.Status)
-	}
-
-	var result DownloadResponse
-	if err := json.NewDecoder(resp.Body).Decode(&result); err != nil {
-		return "", fmt.Errorf("failed to parse response: %w", err)
-	}
-
-	if result.URL == "" {
-		return "", fmt.Errorf("server returned empty URL")
-	}
-
-	return result.URL, nil
 }

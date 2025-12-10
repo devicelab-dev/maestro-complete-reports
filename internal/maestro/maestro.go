@@ -3,6 +3,7 @@ package maestro
 import (
 	"archive/zip"
 	"bufio"
+	"encoding/json"
 	"fmt"
 	"io"
 	"net/http"
@@ -14,12 +15,20 @@ import (
 )
 
 const (
-	// TODO: Replace with actual server endpoint
-	jarDownloadURL = "PLACEHOLDER_URL"
+	baseURL        = "https://open.devicelab.dev"
+	downloadURLFmt = baseURL + "/download/maestro-complete-reports/jars/%s.zip"
+	listVersionURL = baseURL + "/api/maestro-complete-reports/jars"
 	backupDir      = ".maestro/backup"
 )
 
-var supportedVersions = []string{"2.0.9", "2.0.10"}
+// ErrVersionNotSupported is returned when the Maestro version is not supported
+var ErrVersionNotSupported = fmt.Errorf("version not supported")
+
+// VersionListResponse represents the API response for supported versions
+type VersionListResponse struct {
+	Project  string   `json:"project"`
+	Versions []string `json:"versions"`
+}
 
 type Maestro struct {
 	Version string
@@ -30,10 +39,6 @@ func Detect() (*Maestro, error) {
 	version, err := getVersion()
 	if err != nil {
 		return nil, fmt.Errorf("maestro not found: %w", err)
-	}
-
-	if !isSupportedVersion(version) {
-		return nil, fmt.Errorf("unsupported maestro version: %s (supported: %v)", version, supportedVersions)
 	}
 
 	libPath, err := getLibPath()
@@ -71,15 +76,6 @@ func getVersion() (string, error) {
 	}
 
 	return "", fmt.Errorf("could not parse version from output: %s", outputStr)
-}
-
-func isSupportedVersion(version string) bool {
-	for _, v := range supportedVersions {
-		if v == version {
-			return true
-		}
-	}
-	return false
 }
 
 func getLibPath() (string, error) {
@@ -199,7 +195,11 @@ func (m *Maestro) BackupJars() (string, error) {
 	return backupPath, nil
 }
 
-func (m *Maestro) DownloadAndReplaceJars(downloadURL string) error {
+// DownloadAndReplaceJars downloads JARs for the detected Maestro version.
+// If 404, it fetches supported versions and returns ErrVersionNotSupported.
+func (m *Maestro) DownloadAndReplaceJars() error {
+	downloadURL := fmt.Sprintf(downloadURLFmt, m.Version)
+
 	tempDir, err := os.MkdirTemp("", "maestro-jars-")
 	if err != nil {
 		return fmt.Errorf("failed to create temp directory: %w", err)
@@ -208,9 +208,35 @@ func (m *Maestro) DownloadAndReplaceJars(downloadURL string) error {
 
 	zipPath := filepath.Join(tempDir, "jars.zip")
 
-	// Download
-	if err := downloadFile(downloadURL, zipPath); err != nil {
+	// Download - check for 404 (version not supported)
+	resp, err := http.Get(downloadURL)
+	if err != nil {
 		return fmt.Errorf("failed to download jars: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode == http.StatusNotFound {
+		// Version not supported - fetch list and return error
+		versions, listErr := GetSupportedVersions()
+		if listErr != nil {
+			return fmt.Errorf("maestro version %s is not supported", m.Version)
+		}
+		return fmt.Errorf("maestro version %s is not supported. Supported versions: %v", m.Version, versions)
+	}
+
+	if resp.StatusCode != http.StatusOK {
+		return fmt.Errorf("failed to download jars: %s", resp.Status)
+	}
+
+	// Save zip file
+	out, err := os.Create(zipPath)
+	if err != nil {
+		return err
+	}
+	_, err = io.Copy(out, resp.Body)
+	out.Close()
+	if err != nil {
+		return fmt.Errorf("failed to save zip file: %w", err)
 	}
 
 	// Extract
@@ -240,6 +266,26 @@ func (m *Maestro) DownloadAndReplaceJars(downloadURL string) error {
 	}
 
 	return nil
+}
+
+// GetSupportedVersions fetches the list of supported Maestro versions from the API
+func GetSupportedVersions() ([]string, error) {
+	resp, err := http.Get(listVersionURL)
+	if err != nil {
+		return nil, fmt.Errorf("failed to fetch versions: %w", err)
+	}
+	defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		return nil, fmt.Errorf("failed to fetch versions: %s", resp.Status)
+	}
+
+	var result VersionListResponse
+	if err := json.NewDecoder(resp.Body).Decode(&result); err != nil {
+		return nil, fmt.Errorf("failed to parse versions: %w", err)
+	}
+
+	return result.Versions, nil
 }
 
 func (m *Maestro) RestoreJars() error {
