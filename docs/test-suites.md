@@ -2,6 +2,8 @@
 
 Maestro supports hierarchical test organization using `suite` and `test` commands for meaningful groupings in reports.
 
+> **Note:** `describe` and `it` are aliases for `suite` and `test` respectively.
+
 ## Structure Overview
 
 ```
@@ -90,6 +92,98 @@ When flows don't use `suite`/`test` commands:
 - The suite name defaults to "Test Suite" (or use `--test-suite-name`)
 - Test names come from the flow's `name` field or filename
 
-## Complete Examples
+## Multiple Tests Per Flow
 
-See [samples/flows/](../samples/flows/) for working examples.
+A single flow file can contain multiple tests:
+
+```yaml
+# login-tests.yaml
+appId: com.example.app
+---
+- launchApp:
+    clearState: true
+
+- suite: "Login Validation"
+
+- test: "Should show error for empty username"
+  steps:
+    - tapOn:
+        id: "login-button"
+    - assertVisible: "Username is required"
+
+- test: "Should show error for empty password"
+  steps:
+    - tapOn:
+        id: "username-input"
+    - inputText: "testuser"
+    - tapOn:
+        id: "login-button"
+    - assertVisible: "Password is required"
+
+- test: "Should login successfully"
+  steps:
+    - tapOn:
+        id: "username-input"
+    - inputText: "testuser"
+    - tapOn:
+        id: "password-input"
+    - inputText: "password123"
+    - tapOn:
+        id: "login-button"
+    - assertVisible:
+        id: "home-screen"
+```
+
+## Shared Flows
+
+Use `runFlow` to reuse common steps:
+
+```yaml
+# common/login.yaml
+- tapOn:
+    id: "username-input"
+- inputText: ${username}
+- tapOn:
+    id: "password-input"
+- inputText: ${password}
+- tapOn:
+    id: "login-button"
+```
+
+```yaml
+# auth-suite/login-valid-primary.yaml
+- suite: "Valid Login"
+- test: "Should login with primary credentials"
+  steps:
+    - runFlow:
+        file: ../common/login.yaml
+        env:
+          username: testuser
+          password: password123
+    - assertVisible:
+        id: "home-screen"
+```
+
+## Running Tests
+
+```bash
+# Run a suite file
+maestro test auth-suite.yaml
+
+# Run a folder of flows
+maestro test auth-suite/
+
+# Run with custom report directory
+maestro test auth-suite.yaml --report-dir ./reports
+
+# Run with flat output (for CI)
+maestro test auth-suite.yaml --report-dir ./reports --flatten-report-output
+```
+
+## Best Practices
+
+1. **One suite per feature** - Group related tests under the same `suite` name
+2. **Descriptive test names** - Use "Should..." format for clarity
+3. **Shared flows for common steps** - Avoid duplicating login, navigation, etc.
+4. **Keep tests independent** - Each test should work standalone with `clearState: true`
+5. **Use tags** - Add tags for filtering (`smoke`, `regression`, `auth`, etc.)
