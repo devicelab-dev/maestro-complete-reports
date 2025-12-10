@@ -32,21 +32,31 @@ func main() {
 	}
 }
 
+// ANSI color codes
+const (
+	colorReset  = "\033[0m"
+	colorRed    = "\033[31m"
+	colorCyan   = "\033[36m"
+	colorGreen  = "\033[32m"
+	colorYellow = "\033[33m"
+	colorBold   = "\033[1m"
+)
+
 func printBanner() {
-	fmt.Println("╔══════════════════════════════════════════════════════════════╗")
-	fmt.Println("║  Maestro Complete Reports - by DeviceLab.dev                 ║")
-	fmt.Println("║  Stop renting devices you already own.                       ║")
-	fmt.Println("║  Build your own distributed lab: https://devicelab.dev       ║")
-	fmt.Println("╚══════════════════════════════════════════════════════════════╝")
+	fmt.Println()
+	fmt.Println(colorCyan + "╔══════════════════════════════════════════════════════════════╗" + colorReset)
+	fmt.Println(colorCyan + "║" + colorReset + colorBold + "  Maestro Complete Reports" + colorReset + " - by " + colorGreen + "DeviceLab.dev" + colorReset + colorCyan + "                 ║" + colorReset)
+	fmt.Println(colorCyan + "║" + colorReset + colorYellow + "  Stop renting devices you already own.                       " + colorReset + colorCyan + "║" + colorReset)
+	fmt.Println(colorCyan + "║" + colorReset + "  Build your own distributed lab: " + colorGreen + "https://devicelab.dev" + colorReset + colorCyan + "       ║" + colorReset)
+	fmt.Println(colorCyan + "╚══════════════════════════════════════════════════════════════╝" + colorReset)
 	fmt.Println()
 }
 
 func printPromo() {
 	fmt.Println()
-	fmt.Println("Made with ❤️  by engineers who believe quality mobile testing")
-	fmt.Println("shouldn't require enterprise budgets.")
+	fmt.Println("Made with " + colorRed + "❤️" + colorReset + "  by engineers who believe quality mobile testing shouldn't require enterprise budgets.")
+	fmt.Println("Try DeviceLab free: " + colorGreen + "https://devicelab.dev" + colorReset)
 	fmt.Println()
-	fmt.Println("Try DeviceLab free: https://devicelab.dev")
 }
 
 func printUsage() {
@@ -66,24 +76,22 @@ func runSetup() {
 		os.Exit(1)
 	}
 
-	fmt.Printf("Found Maestro %s\n", m.Version)
-	fmt.Printf("Lib path: %s\n", m.LibPath)
+	fmt.Printf("Found Maestro %s at %s\n", m.Version, m.LibPath)
 
 	fmt.Println("Backing up original JARs...")
-	backupPath, err := m.BackupJars()
-	if err != nil {
+	if _, err := m.BackupJars(); err != nil {
 		fmt.Fprintf(os.Stderr, "Error backing up JARs: %v\n", err)
 		os.Exit(1)
 	}
-	fmt.Printf("Backup created at: %s\n", backupPath)
+	fmt.Println("Backup complete")
 
-	fmt.Println("Downloading and replacing JARs...")
 	if err := m.DownloadAndReplaceJars(); err != nil {
 		fmt.Fprintf(os.Stderr, "Error: %v\n", err)
 		os.Exit(1)
 	}
 
-	fmt.Println("Setup complete!")
+	fmt.Println()
+	fmt.Println(colorGreen + "Setup complete!" + colorReset)
 	printPromo()
 }
 

@@ -209,6 +209,7 @@ func (m *Maestro) DownloadAndReplaceJars() error {
 	zipPath := filepath.Join(tempDir, "jars.zip")
 
 	// Download - check for 404 (version not supported)
+	fmt.Println("Downloading patched JARs...")
 	resp, err := http.Get(downloadURL)
 	if err != nil {
 		return fmt.Errorf("failed to download jars: %w", err)
@@ -245,24 +246,36 @@ func (m *Maestro) DownloadAndReplaceJars() error {
 		return fmt.Errorf("failed to extract jars: %w", err)
 	}
 
-	// Copy JARs to lib directory
-	entries, err := os.ReadDir(extractPath)
+	// Find and copy JARs to lib directory (handles nested directories)
+	fmt.Println("Installing JARs:")
+	jarCount := 0
+	err = filepath.Walk(extractPath, func(path string, info os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
+		if info.IsDir() {
+			return nil
+		}
+		// Skip macOS metadata files
+		if strings.Contains(path, "__MACOSX") {
+			return nil
+		}
+		if strings.HasSuffix(info.Name(), ".jar") {
+			dst := filepath.Join(m.LibPath, info.Name())
+			if err := copyFile(path, dst); err != nil {
+				return fmt.Errorf("failed to copy %s: %w", info.Name(), err)
+			}
+			fmt.Printf("  ✓ %s\n", dst)
+			jarCount++
+		}
+		return nil
+	})
 	if err != nil {
-		return fmt.Errorf("failed to read extracted directory: %w", err)
+		return fmt.Errorf("failed to install jars: %w", err)
 	}
 
-	for _, entry := range entries {
-		if entry.IsDir() {
-			continue
-		}
-		name := entry.Name()
-		if strings.HasSuffix(name, ".jar") {
-			src := filepath.Join(extractPath, name)
-			dst := filepath.Join(m.LibPath, name)
-			if err := copyFile(src, dst); err != nil {
-				return fmt.Errorf("failed to copy %s: %w", name, err)
-			}
-		}
+	if jarCount == 0 {
+		return fmt.Errorf("no JAR files found in downloaded archive")
 	}
 
 	return nil
