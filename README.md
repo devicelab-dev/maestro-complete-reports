@@ -1,17 +1,31 @@
-# Maestro Complete Reports
-
-> **Community Build** - Not affiliated with Maestro or mobile.dev
->
-> Enhanced reporting by [DeviceLab.dev](https://devicelab.dev) - Turn Your Devices Into a Distributed Device Lab
+<p align="center">
+  <h1 align="center">Maestro Complete Reports</h1>
+  <p align="center">
+    <strong>Enhanced reporting for Maestro mobile UI testing</strong>
+  </p>
+  <p align="center">
+    <a href="https://github.com/devicelab-dev/maestro-complete-reports/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" alt="License"></a>
+    <a href="https://github.com/devicelab-dev/maestro-complete-reports/releases"><img src="https://img.shields.io/badge/maestro-2.0.9%20%7C%202.0.10-green.svg" alt="Maestro Version"></a>
+    <a href="https://devicelab.dev"><img src="https://img.shields.io/badge/by-DeviceLab.dev-orange.svg" alt="DeviceLab.dev"></a>
+  </p>
+</p>
 
 ---
 
-Patch Maestro with enhanced reporting features including JSON, HTML, JUnit XML, and Allure report formats.
+> **Community Build** - Not affiliated with Maestro or mobile.dev
+>
+> Built by [DeviceLab.dev](https://devicelab.dev) - Turn Your Devices Into a Distributed Device Lab
 
-## Supported Versions
+## Features
 
-- Maestro 2.0.9
-- Maestro 2.0.10
+| Feature | Description |
+|---------|-------------|
+| **JSON Reports** | Complete test data for programmatic analysis |
+| **HTML Reports** | Interactive web reports for stakeholders |
+| **JUnit XML** | CI/CD integration (Jenkins, GitLab, GitHub Actions) |
+| **Allure Support** | Trend analysis and historical comparison |
+| **Test Suites** | Hierarchical suite/test organization |
+| **Screenshots** | Automatic capture with linking |
 
 ## Quick Start
 
@@ -38,23 +52,7 @@ cp ~/.maestro/backup/*.jar ~/.maestro/lib/
 ## Usage
 
 ```bash
-# Basic - generates reports in ./reports/
-maestro test flows/
-
-# CI/CD optimized - flat output
-maestro test flows/ \
-  --report-dir ./ci-reports \
-  --flatten-report-output
-```
-
-## Try It Yourself
-
-```bash
-# Install sample app
-adb install samples/apk/TestHive.apk
-
-# Run sample tests
-maestro test samples/flows/auth-suite.yaml
+maestro test flows/ --report-dir report_folder
 ```
 
 ## Sample Reports
@@ -65,12 +63,7 @@ maestro test samples/flows/auth-suite.yaml
 | JUnit XML | [junit-report.xml](samples/junit-report.xml) |
 | Sample Flows | [samples/flows/](samples/flows/) |
 
-### HTML Report
-
-![HTML Report](assets/html-report.png)
-
-<details>
-<summary>Console Output</summary>
+### Console Output
 
 ```
 ===== Test Summary =====
@@ -102,14 +95,17 @@ Tests:  4 passed, 1 failed
 ==========================================================================================
 ```
 
-</details>
+### HTML Report
+
+![HTML Report](assets/html-report.png)
 
 ## Documentation
 
-- [CLI Options](docs/cli-options.md) - All report configuration options
-- [Test Suites](docs/test-suites.md) - Organizing tests with suite/test commands
-- [CI/CD Integration](docs/ci-cd.md) - GitHub, GitLab, Jenkins, CircleCI examples
-- [Analyzing Reports](docs/analyzing-reports.md) - jq queries, Allure, report schemas
+| Doc | Description |
+|-----|-------------|
+| [CLI Options](docs/cli-options.md) | All report configuration options |
+| [Test Suites](docs/test-suites.md) | Organizing tests with suite/test commands |
+| [CI/CD Integration](docs/ci-cd.md) | GitHub, GitLab, Jenkins, CircleCI examples |
 
 ## Backup Location
 
@@ -127,8 +123,6 @@ Apache 2.0 (same as Maestro)
 
 ## Disclaimer
 
-This project is not affiliated with, endorsed by, or connected to mobile.dev or the official Maestro project.
+This project is not affiliated with, endorsed by, or connected to mobile.dev or the official Maestro project. This tool patches your existing Maestro installation to add reporting functionality not yet available in the official release.
 
-This tool patches your existing Maestro installation to add reporting functionality not yet available in the official release.
-
-Use at your own risk. We recommend switching to official Maestro once these reporting features are officially released.
+**Use at your own risk.** We recommend switching to official Maestro once these reporting features are officially released.
