@@ -1,0 +1,8 @@
+# Navigate to cart screen
+appId: com.testhiveapp
+---
+- tapOn:
+    id: "cart-button"
+
+- assertVisible:
+    id: "cart-screen"

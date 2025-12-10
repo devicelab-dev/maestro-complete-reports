@@ -1,0 +1,2136 @@
+{
+  "schemaVersion" : "1.0.0",
+  "summary" : {
+    "totalFlows" : 5,
+    "passedFlows" : 4,
+    "failedFlows" : 1,
+    "skippedFlows" : 0,
+    "totalCommands" : 81,
+    "passedCommands" : 78,
+    "failedCommands" : 3,
+    "skippedCommands" : 0,
+    "totalDurationMs" : 124775,
+    "startTime" : "2025-12-10T12:32:03.794139+05:30",
+    "endTime" : "2025-12-10T12:34:08.569784+05:30"
+  },
+  "device" : {
+    "id" : "11171JEC200939",
+    "name" : "11171JEC200939",
+    "platform" : "android",
+    "osVersion" : "unknown"
+  },
+  "flows" : [ {
+    "id" : "flow_001",
+    "name" : "Login - Invalid Password",
+    "fileName" : "login-invalid-password.yaml",
+    "appId" : "com.testhiveapp",
+    "tags" : [ "auth", "negative" ],
+    "status" : "passed",
+    "startTime" : "2025-12-10T12:32:07.347735+05:30",
+    "endTime" : "2025-12-10T12:32:30.84218+05:30",
+    "durationMs" : 23494,
+    "commands" : [ {
+      "id" : "cmd_001",
+      "index" : 0,
+      "type" : "defineVariables",
+      "description" : "Define variables",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:32:07.556142+05:30",
+      "endTime" : "2025-12-10T12:32:07.556472+05:30",
+      "durationMs" : 0,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_002",
+      "index" : 1,
+      "type" : "unknown",
+      "description" : "Apply configuration",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:32:07.557119+05:30",
+      "endTime" : "2025-12-10T12:32:07.55721+05:30",
+      "durationMs" : 0,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_003",
+      "index" : 2,
+      "type" : "launchApp",
+      "description" : "Launch app \"com.testhiveapp\" with clear state",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:32:07.557433+05:30",
+      "endTime" : "2025-12-10T12:32:08.704441+05:30",
+      "durationMs" : 1147,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_004",
+      "index" : 3,
+      "type" : "suite",
+      "description" : "Suite: Invalid Login",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:32:08.705911+05:30",
+      "endTime" : "2025-12-10T12:32:08.707118+05:30",
+      "durationMs" : 1,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_005",
+      "index" : 4,
+      "type" : "test",
+      "description" : "Test: Should show error for invalid password",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:32:08.707968+05:30",
+      "endTime" : "2025-12-10T12:32:30.70869+05:30",
+      "durationMs" : 22000,
+      "attempts" : 1,
+      "commands" : [ {
+        "id" : "cmd_005_001",
+        "index" : 0,
+        "type" : "assertCondition",
+        "description" : "Assert that \"Welcome Back\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:08.709463+05:30",
+        "endTime" : "2025-12-10T12:32:11.392562+05:30",
+        "durationMs" : 2683,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_002",
+        "index" : 1,
+        "type" : "tapOn",
+        "description" : "Tap on id: username-input",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:11.393216+05:30",
+        "endTime" : "2025-12-10T12:32:15.661797+05:30",
+        "durationMs" : 4268,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_003",
+        "index" : 2,
+        "type" : "inputText",
+        "description" : "Input text devicelab",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:15.662948+05:30",
+        "endTime" : "2025-12-10T12:32:18.293923+05:30",
+        "durationMs" : 2630,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_004",
+        "index" : 3,
+        "type" : "tapOn",
+        "description" : "Tap on id: password-input",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:18.294685+05:30",
+        "endTime" : "2025-12-10T12:32:22.253335+05:30",
+        "durationMs" : 3958,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_005",
+        "index" : 4,
+        "type" : "inputText",
+        "description" : "Input text wrongpassword",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:22.254458+05:30",
+        "endTime" : "2025-12-10T12:32:25.15589+05:30",
+        "durationMs" : 2901,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_006",
+        "index" : 5,
+        "type" : "tapOn",
+        "description" : "Tap on id: login-button",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:25.156898+05:30",
+        "endTime" : "2025-12-10T12:32:29.764599+05:30",
+        "durationMs" : 4607,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_007",
+        "index" : 6,
+        "type" : "assertCondition",
+        "description" : "Assert that \"Invalid username or password\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:29.766496+05:30",
+        "endTime" : "2025-12-10T12:32:30.519442+05:30",
+        "durationMs" : 752,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_008",
+        "index" : 7,
+        "type" : "assertCondition",
+        "description" : "Assert that \"Welcome Back\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:30.522394+05:30",
+        "endTime" : "2025-12-10T12:32:30.706603+05:30",
+        "durationMs" : 184,
+        "attempts" : 1
+      } ]
+    } ],
+    "suites" : [ {
+      "suite" : "Invalid Login",
+      "status" : "passed",
+      "durationMs" : 1,
+      "tests" : [ {
+        "test" : "Should show error for invalid password",
+        "file" : "login-invalid-password.yaml",
+        "status" : "passed",
+        "durationMs" : 22000,
+        "steps" : [ {
+          "id" : "cmd_005_001",
+          "index" : 0,
+          "type" : "assertCondition",
+          "description" : "Assert that \"Welcome Back\" is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:08.709463+05:30",
+          "endTime" : "2025-12-10T12:32:11.392562+05:30",
+          "durationMs" : 2683,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002",
+          "index" : 1,
+          "type" : "tapOn",
+          "description" : "Tap on id: username-input",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:11.393216+05:30",
+          "endTime" : "2025-12-10T12:32:15.661797+05:30",
+          "durationMs" : 4268,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_003",
+          "index" : 2,
+          "type" : "inputText",
+          "description" : "Input text devicelab",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:15.662948+05:30",
+          "endTime" : "2025-12-10T12:32:18.293923+05:30",
+          "durationMs" : 2630,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_004",
+          "index" : 3,
+          "type" : "tapOn",
+          "description" : "Tap on id: password-input",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:18.294685+05:30",
+          "endTime" : "2025-12-10T12:32:22.253335+05:30",
+          "durationMs" : 3958,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_005",
+          "index" : 4,
+          "type" : "inputText",
+          "description" : "Input text wrongpassword",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:22.254458+05:30",
+          "endTime" : "2025-12-10T12:32:25.15589+05:30",
+          "durationMs" : 2901,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_006",
+          "index" : 5,
+          "type" : "tapOn",
+          "description" : "Tap on id: login-button",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:25.156898+05:30",
+          "endTime" : "2025-12-10T12:32:29.764599+05:30",
+          "durationMs" : 4607,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_007",
+          "index" : 6,
+          "type" : "assertCondition",
+          "description" : "Assert that \"Invalid username or password\" is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:29.766496+05:30",
+          "endTime" : "2025-12-10T12:32:30.519442+05:30",
+          "durationMs" : 752,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_008",
+          "index" : 7,
+          "type" : "assertCondition",
+          "description" : "Assert that \"Welcome Back\" is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:30.522394+05:30",
+          "endTime" : "2025-12-10T12:32:30.706603+05:30",
+          "durationMs" : 184,
+          "attempts" : 1
+        } ]
+      } ]
+    } ]
+  }, {
+    "id" : "flow_002",
+    "name" : "Login - Valid Alternate Credentials",
+    "fileName" : "login-valid-alternate.yaml",
+    "appId" : "com.testhiveapp",
+    "tags" : [ "auth", "smoke" ],
+    "status" : "passed",
+    "startTime" : "2025-12-10T12:32:30.846065+05:30",
+    "endTime" : "2025-12-10T12:32:52.434525+05:30",
+    "durationMs" : 21588,
+    "commands" : [ {
+      "id" : "cmd_001",
+      "index" : 0,
+      "type" : "defineVariables",
+      "description" : "Define variables",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:32:30.846952+05:30",
+      "endTime" : "2025-12-10T12:32:30.847039+05:30",
+      "durationMs" : 0,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_002",
+      "index" : 1,
+      "type" : "unknown",
+      "description" : "Apply configuration",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:32:30.847225+05:30",
+      "endTime" : "2025-12-10T12:32:30.847302+05:30",
+      "durationMs" : 0,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_003",
+      "index" : 2,
+      "type" : "launchApp",
+      "description" : "Launch app \"com.testhiveapp\" with clear state",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:32:30.84758+05:30",
+      "endTime" : "2025-12-10T12:32:31.91086+05:30",
+      "durationMs" : 1063,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_004",
+      "index" : 3,
+      "type" : "suite",
+      "description" : "Suite: Valid Login",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:32:31.912039+05:30",
+      "endTime" : "2025-12-10T12:32:31.91289+05:30",
+      "durationMs" : 0,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_005",
+      "index" : 4,
+      "type" : "test",
+      "description" : "Test: Should login with alternate credentials",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:32:31.91528+05:30",
+      "endTime" : "2025-12-10T12:32:52.362578+05:30",
+      "durationMs" : 20447,
+      "attempts" : 1,
+      "commands" : [ {
+        "id" : "cmd_005_001",
+        "index" : 0,
+        "type" : "assertCondition",
+        "description" : "Assert that \"Welcome Back\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:31.916823+05:30",
+        "endTime" : "2025-12-10T12:32:35.334175+05:30",
+        "durationMs" : 3417,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_002",
+        "index" : 1,
+        "type" : "runFlow",
+        "description" : "Run ../common/login.yaml",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:35.335986+05:30",
+        "endTime" : "2025-12-10T12:32:51.416437+05:30",
+        "durationMs" : 16080,
+        "attempts" : 1,
+        "commands" : [ {
+          "id" : "cmd_005_002_001",
+          "index" : 0,
+          "type" : "defineVariables",
+          "description" : "Define variables",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:35.3365+05:30",
+          "endTime" : "2025-12-10T12:32:35.336802+05:30",
+          "durationMs" : 0,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_002",
+          "index" : 1,
+          "type" : "unknown",
+          "description" : "Apply configuration",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:35.337514+05:30",
+          "endTime" : "2025-12-10T12:32:35.337932+05:30",
+          "durationMs" : 0,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_003",
+          "index" : 2,
+          "type" : "waitForAnimationToEnd",
+          "description" : "Wait for animation to end",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:35.3388+05:30",
+          "endTime" : "2025-12-10T12:32:36.470181+05:30",
+          "durationMs" : 1131,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_004",
+          "index" : 3,
+          "type" : "assertCondition",
+          "description" : "Assert that id: username-input is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:36.470534+05:30",
+          "endTime" : "2025-12-10T12:32:36.654043+05:30",
+          "durationMs" : 183,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_005",
+          "index" : 4,
+          "type" : "tapOn",
+          "description" : "Tap on id: username-input",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:36.654698+05:30",
+          "endTime" : "2025-12-10T12:32:40.356669+05:30",
+          "durationMs" : 3701,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_006",
+          "index" : 5,
+          "type" : "inputText",
+          "description" : "Input text a",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:40.690337+05:30",
+          "endTime" : "2025-12-10T12:32:42.234463+05:30",
+          "durationMs" : 1544,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_007",
+          "index" : 6,
+          "type" : "tapOn",
+          "description" : "Tap on id: password-input",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:42.23563+05:30",
+          "endTime" : "2025-12-10T12:32:46.199118+05:30",
+          "durationMs" : 3963,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_008",
+          "index" : 7,
+          "type" : "inputText",
+          "description" : "Input text a",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:46.224696+05:30",
+          "endTime" : "2025-12-10T12:32:47.540825+05:30",
+          "durationMs" : 1316,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_009",
+          "index" : 8,
+          "type" : "tapOn",
+          "description" : "Tap on id: login-button",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:47.542545+05:30",
+          "endTime" : "2025-12-10T12:32:51.137356+05:30",
+          "durationMs" : 3594,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_010",
+          "index" : 9,
+          "type" : "assertCondition",
+          "description" : "Assert that id: products-screen is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:51.139182+05:30",
+          "endTime" : "2025-12-10T12:32:51.414995+05:30",
+          "durationMs" : 275,
+          "attempts" : 1
+        } ]
+      }, {
+        "id" : "cmd_005_003",
+        "index" : 2,
+        "type" : "assertCondition",
+        "description" : "Assert that \"TestHive\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:51.417482+05:30",
+        "endTime" : "2025-12-10T12:32:52.066405+05:30",
+        "durationMs" : 648,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_004",
+        "index" : 3,
+        "type" : "assertCondition",
+        "description" : "Assert that id: products-screen is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:52.067773+05:30",
+        "endTime" : "2025-12-10T12:32:52.361424+05:30",
+        "durationMs" : 293,
+        "attempts" : 1
+      } ]
+    } ],
+    "suites" : [ {
+      "suite" : "Valid Login",
+      "status" : "passed",
+      "durationMs" : 0,
+      "tests" : [ {
+        "test" : "Should login with alternate credentials",
+        "file" : "login-valid-alternate.yaml",
+        "status" : "passed",
+        "durationMs" : 20447,
+        "steps" : [ {
+          "id" : "cmd_005_001",
+          "index" : 0,
+          "type" : "assertCondition",
+          "description" : "Assert that \"Welcome Back\" is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:31.916823+05:30",
+          "endTime" : "2025-12-10T12:32:35.334175+05:30",
+          "durationMs" : 3417,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002",
+          "index" : 1,
+          "type" : "runFlow",
+          "description" : "Run ../common/login.yaml",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:35.335986+05:30",
+          "endTime" : "2025-12-10T12:32:51.416437+05:30",
+          "durationMs" : 16080,
+          "attempts" : 1,
+          "commands" : [ {
+            "id" : "cmd_005_002_001",
+            "index" : 0,
+            "type" : "defineVariables",
+            "description" : "Define variables",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:32:35.3365+05:30",
+            "endTime" : "2025-12-10T12:32:35.336802+05:30",
+            "durationMs" : 0,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_002",
+            "index" : 1,
+            "type" : "unknown",
+            "description" : "Apply configuration",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:32:35.337514+05:30",
+            "endTime" : "2025-12-10T12:32:35.337932+05:30",
+            "durationMs" : 0,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_003",
+            "index" : 2,
+            "type" : "waitForAnimationToEnd",
+            "description" : "Wait for animation to end",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:32:35.3388+05:30",
+            "endTime" : "2025-12-10T12:32:36.470181+05:30",
+            "durationMs" : 1131,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_004",
+            "index" : 3,
+            "type" : "assertCondition",
+            "description" : "Assert that id: username-input is visible",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:32:36.470534+05:30",
+            "endTime" : "2025-12-10T12:32:36.654043+05:30",
+            "durationMs" : 183,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_005",
+            "index" : 4,
+            "type" : "tapOn",
+            "description" : "Tap on id: username-input",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:32:36.654698+05:30",
+            "endTime" : "2025-12-10T12:32:40.356669+05:30",
+            "durationMs" : 3701,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_006",
+            "index" : 5,
+            "type" : "inputText",
+            "description" : "Input text a",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:32:40.690337+05:30",
+            "endTime" : "2025-12-10T12:32:42.234463+05:30",
+            "durationMs" : 1544,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_007",
+            "index" : 6,
+            "type" : "tapOn",
+            "description" : "Tap on id: password-input",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:32:42.23563+05:30",
+            "endTime" : "2025-12-10T12:32:46.199118+05:30",
+            "durationMs" : 3963,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_008",
+            "index" : 7,
+            "type" : "inputText",
+            "description" : "Input text a",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:32:46.224696+05:30",
+            "endTime" : "2025-12-10T12:32:47.540825+05:30",
+            "durationMs" : 1316,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_009",
+            "index" : 8,
+            "type" : "tapOn",
+            "description" : "Tap on id: login-button",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:32:47.542545+05:30",
+            "endTime" : "2025-12-10T12:32:51.137356+05:30",
+            "durationMs" : 3594,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_010",
+            "index" : 9,
+            "type" : "assertCondition",
+            "description" : "Assert that id: products-screen is visible",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:32:51.139182+05:30",
+            "endTime" : "2025-12-10T12:32:51.414995+05:30",
+            "durationMs" : 275,
+            "attempts" : 1
+          } ]
+        }, {
+          "id" : "cmd_005_003",
+          "index" : 2,
+          "type" : "assertCondition",
+          "description" : "Assert that \"TestHive\" is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:51.417482+05:30",
+          "endTime" : "2025-12-10T12:32:52.066405+05:30",
+          "durationMs" : 648,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_004",
+          "index" : 3,
+          "type" : "assertCondition",
+          "description" : "Assert that id: products-screen is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:52.067773+05:30",
+          "endTime" : "2025-12-10T12:32:52.361424+05:30",
+          "durationMs" : 293,
+          "attempts" : 1
+        } ]
+      } ]
+    } ]
+  }, {
+    "id" : "flow_003",
+    "name" : "Login - Valid Alternate Credentials",
+    "fileName" : "login-valid-alternate_failed.yaml",
+    "appId" : "com.testhiveapp",
+    "tags" : [ "auth", "smoke" ],
+    "status" : "failed",
+    "startTime" : "2025-12-10T12:32:52.436599+05:30",
+    "endTime" : "2025-12-10T12:33:22.850188+05:30",
+    "durationMs" : 30413,
+    "error" : "Assertion is false: id: products-screen is visible",
+    "commands" : [ {
+      "id" : "cmd_001",
+      "index" : 0,
+      "type" : "defineVariables",
+      "description" : "Define variables",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:32:52.437392+05:30",
+      "endTime" : "2025-12-10T12:32:52.437461+05:30",
+      "durationMs" : 0,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_002",
+      "index" : 1,
+      "type" : "unknown",
+      "description" : "Apply configuration",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:32:52.437615+05:30",
+      "endTime" : "2025-12-10T12:32:52.437673+05:30",
+      "durationMs" : 0,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_003",
+      "index" : 2,
+      "type" : "launchApp",
+      "description" : "Launch app \"com.testhiveapp\" with clear state",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:32:52.437802+05:30",
+      "endTime" : "2025-12-10T12:32:53.568675+05:30",
+      "durationMs" : 1130,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_004",
+      "index" : 3,
+      "type" : "suite",
+      "description" : "Suite: Valid Login",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:32:53.569907+05:30",
+      "endTime" : "2025-12-10T12:32:53.570809+05:30",
+      "durationMs" : 0,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_005",
+      "index" : 4,
+      "type" : "test",
+      "description" : "Test: Should login with alternate credentials. fail as password is wrong",
+      "status" : "failed",
+      "startTime" : "2025-12-10T12:32:53.571727+05:30",
+      "endTime" : "2025-12-10T12:33:22.806127+05:30",
+      "durationMs" : 29234,
+      "attempts" : 1,
+      "error" : "Assertion is false: id: products-screen is visible",
+      "commands" : [ {
+        "id" : "cmd_005_001",
+        "index" : 0,
+        "type" : "assertCondition",
+        "description" : "Assert that \"Welcome Back\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:53.57264+05:30",
+        "endTime" : "2025-12-10T12:32:56.296277+05:30",
+        "durationMs" : 2723,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_002",
+        "index" : 1,
+        "type" : "runFlow",
+        "description" : "Run ../common/login.yaml",
+        "status" : "failed",
+        "startTime" : "2025-12-10T12:32:56.29792+05:30",
+        "endTime" : "2025-12-10T12:33:22.805139+05:30",
+        "durationMs" : 26507,
+        "attempts" : 1,
+        "error" : "Assertion is false: id: products-screen is visible",
+        "commands" : [ {
+          "id" : "cmd_005_002_001",
+          "index" : 0,
+          "type" : "defineVariables",
+          "description" : "Define variables",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:56.298894+05:30",
+          "endTime" : "2025-12-10T12:32:56.299354+05:30",
+          "durationMs" : 0,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_002",
+          "index" : 1,
+          "type" : "unknown",
+          "description" : "Apply configuration",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:56.299997+05:30",
+          "endTime" : "2025-12-10T12:32:56.300223+05:30",
+          "durationMs" : 0,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_003",
+          "index" : 2,
+          "type" : "waitForAnimationToEnd",
+          "description" : "Wait for animation to end",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:56.300704+05:30",
+          "endTime" : "2025-12-10T12:32:57.291278+05:30",
+          "durationMs" : 990,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_004",
+          "index" : 3,
+          "type" : "assertCondition",
+          "description" : "Assert that id: username-input is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:57.291679+05:30",
+          "endTime" : "2025-12-10T12:32:57.456659+05:30",
+          "durationMs" : 164,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_005",
+          "index" : 4,
+          "type" : "tapOn",
+          "description" : "Tap on id: username-input",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:57.457122+05:30",
+          "endTime" : "2025-12-10T12:33:01.379893+05:30",
+          "durationMs" : 3922,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_006",
+          "index" : 5,
+          "type" : "inputText",
+          "description" : "Input text a",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:01.405419+05:30",
+          "endTime" : "2025-12-10T12:33:02.926941+05:30",
+          "durationMs" : 1521,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_007",
+          "index" : 6,
+          "type" : "tapOn",
+          "description" : "Tap on id: password-input",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:02.928332+05:30",
+          "endTime" : "2025-12-10T12:33:06.907172+05:30",
+          "durationMs" : 3978,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_008",
+          "index" : 7,
+          "type" : "inputText",
+          "description" : "Input text b",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:06.931669+05:30",
+          "endTime" : "2025-12-10T12:33:08.28628+05:30",
+          "durationMs" : 1354,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_009",
+          "index" : 8,
+          "type" : "tapOn",
+          "description" : "Tap on id: login-button",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:08.288233+05:30",
+          "endTime" : "2025-12-10T12:33:11.870621+05:30",
+          "durationMs" : 3582,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_010",
+          "index" : 9,
+          "type" : "assertCondition",
+          "description" : "Assert that id: products-screen is visible",
+          "status" : "failed",
+          "startTime" : "2025-12-10T12:33:11.871671+05:30",
+          "endTime" : "2025-12-10T12:33:22.803418+05:30",
+          "durationMs" : 10931,
+          "attempts" : 1,
+          "error" : "Assertion is false: id: products-screen is visible",
+          "screenshot" : "screenshots/screenshot-1765350202798-failed.png"
+        } ]
+      } ]
+    } ],
+    "suites" : [ {
+      "suite" : "Valid Login",
+      "status" : "failed",
+      "durationMs" : 0,
+      "tests" : [ {
+        "test" : "Should login with alternate credentials. fail as password is wrong",
+        "file" : "login-valid-alternate_failed.yaml",
+        "status" : "failed",
+        "durationMs" : 29234,
+        "error" : "Assertion is false: id: products-screen is visible",
+        "steps" : [ {
+          "id" : "cmd_005_001",
+          "index" : 0,
+          "type" : "assertCondition",
+          "description" : "Assert that \"Welcome Back\" is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:53.57264+05:30",
+          "endTime" : "2025-12-10T12:32:56.296277+05:30",
+          "durationMs" : 2723,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002",
+          "index" : 1,
+          "type" : "runFlow",
+          "description" : "Run ../common/login.yaml",
+          "status" : "failed",
+          "startTime" : "2025-12-10T12:32:56.29792+05:30",
+          "endTime" : "2025-12-10T12:33:22.805139+05:30",
+          "durationMs" : 26507,
+          "attempts" : 1,
+          "error" : "Assertion is false: id: products-screen is visible",
+          "commands" : [ {
+            "id" : "cmd_005_002_001",
+            "index" : 0,
+            "type" : "defineVariables",
+            "description" : "Define variables",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:32:56.298894+05:30",
+            "endTime" : "2025-12-10T12:32:56.299354+05:30",
+            "durationMs" : 0,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_002",
+            "index" : 1,
+            "type" : "unknown",
+            "description" : "Apply configuration",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:32:56.299997+05:30",
+            "endTime" : "2025-12-10T12:32:56.300223+05:30",
+            "durationMs" : 0,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_003",
+            "index" : 2,
+            "type" : "waitForAnimationToEnd",
+            "description" : "Wait for animation to end",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:32:56.300704+05:30",
+            "endTime" : "2025-12-10T12:32:57.291278+05:30",
+            "durationMs" : 990,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_004",
+            "index" : 3,
+            "type" : "assertCondition",
+            "description" : "Assert that id: username-input is visible",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:32:57.291679+05:30",
+            "endTime" : "2025-12-10T12:32:57.456659+05:30",
+            "durationMs" : 164,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_005",
+            "index" : 4,
+            "type" : "tapOn",
+            "description" : "Tap on id: username-input",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:32:57.457122+05:30",
+            "endTime" : "2025-12-10T12:33:01.379893+05:30",
+            "durationMs" : 3922,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_006",
+            "index" : 5,
+            "type" : "inputText",
+            "description" : "Input text a",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:33:01.405419+05:30",
+            "endTime" : "2025-12-10T12:33:02.926941+05:30",
+            "durationMs" : 1521,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_007",
+            "index" : 6,
+            "type" : "tapOn",
+            "description" : "Tap on id: password-input",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:33:02.928332+05:30",
+            "endTime" : "2025-12-10T12:33:06.907172+05:30",
+            "durationMs" : 3978,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_008",
+            "index" : 7,
+            "type" : "inputText",
+            "description" : "Input text b",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:33:06.931669+05:30",
+            "endTime" : "2025-12-10T12:33:08.28628+05:30",
+            "durationMs" : 1354,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_009",
+            "index" : 8,
+            "type" : "tapOn",
+            "description" : "Tap on id: login-button",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:33:08.288233+05:30",
+            "endTime" : "2025-12-10T12:33:11.870621+05:30",
+            "durationMs" : 3582,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_010",
+            "index" : 9,
+            "type" : "assertCondition",
+            "description" : "Assert that id: products-screen is visible",
+            "status" : "failed",
+            "startTime" : "2025-12-10T12:33:11.871671+05:30",
+            "endTime" : "2025-12-10T12:33:22.803418+05:30",
+            "durationMs" : 10931,
+            "attempts" : 1,
+            "error" : "Assertion is false: id: products-screen is visible",
+            "screenshot" : "screenshots/screenshot-1765350202798-failed.png"
+          } ]
+        } ]
+      } ]
+    } ]
+  }, {
+    "id" : "flow_004",
+    "name" : "Login - Valid Primary Credentials",
+    "fileName" : "login-valid-primary.yaml",
+    "appId" : "com.testhiveapp",
+    "tags" : [ "auth", "smoke" ],
+    "status" : "passed",
+    "startTime" : "2025-12-10T12:33:22.852532+05:30",
+    "endTime" : "2025-12-10T12:33:46.266803+05:30",
+    "durationMs" : 23414,
+    "commands" : [ {
+      "id" : "cmd_001",
+      "index" : 0,
+      "type" : "defineVariables",
+      "description" : "Define variables",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:33:22.853537+05:30",
+      "endTime" : "2025-12-10T12:33:22.853628+05:30",
+      "durationMs" : 0,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_002",
+      "index" : 1,
+      "type" : "unknown",
+      "description" : "Apply configuration",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:33:22.85398+05:30",
+      "endTime" : "2025-12-10T12:33:22.854096+05:30",
+      "durationMs" : 0,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_003",
+      "index" : 2,
+      "type" : "launchApp",
+      "description" : "Launch app \"com.testhiveapp\" with clear state",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:33:22.854298+05:30",
+      "endTime" : "2025-12-10T12:33:23.886921+05:30",
+      "durationMs" : 1032,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_004",
+      "index" : 3,
+      "type" : "suite",
+      "description" : "Suite: Valid Login",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:33:23.888282+05:30",
+      "endTime" : "2025-12-10T12:33:23.889072+05:30",
+      "durationMs" : 0,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_005",
+      "index" : 4,
+      "type" : "test",
+      "description" : "Test: Should login with primary credentials",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:33:23.889941+05:30",
+      "endTime" : "2025-12-10T12:33:46.255452+05:30",
+      "durationMs" : 22365,
+      "attempts" : 1,
+      "commands" : [ {
+        "id" : "cmd_005_001",
+        "index" : 0,
+        "type" : "assertCondition",
+        "description" : "Assert that \"Welcome Back\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:33:23.890879+05:30",
+        "endTime" : "2025-12-10T12:33:26.644401+05:30",
+        "durationMs" : 2753,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_002",
+        "index" : 1,
+        "type" : "runFlow",
+        "description" : "Run ../common/login.yaml",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:33:26.646248+05:30",
+        "endTime" : "2025-12-10T12:33:45.180748+05:30",
+        "durationMs" : 18534,
+        "attempts" : 1,
+        "commands" : [ {
+          "id" : "cmd_005_002_001",
+          "index" : 0,
+          "type" : "defineVariables",
+          "description" : "Define variables",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:26.647467+05:30",
+          "endTime" : "2025-12-10T12:33:26.648053+05:30",
+          "durationMs" : 0,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_002",
+          "index" : 1,
+          "type" : "unknown",
+          "description" : "Apply configuration",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:26.648978+05:30",
+          "endTime" : "2025-12-10T12:33:26.649279+05:30",
+          "durationMs" : 0,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_003",
+          "index" : 2,
+          "type" : "waitForAnimationToEnd",
+          "description" : "Wait for animation to end",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:26.649711+05:30",
+          "endTime" : "2025-12-10T12:33:27.699905+05:30",
+          "durationMs" : 1050,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_004",
+          "index" : 3,
+          "type" : "assertCondition",
+          "description" : "Assert that id: username-input is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:27.700298+05:30",
+          "endTime" : "2025-12-10T12:33:27.867402+05:30",
+          "durationMs" : 167,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_005",
+          "index" : 4,
+          "type" : "tapOn",
+          "description" : "Tap on id: username-input",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:27.868162+05:30",
+          "endTime" : "2025-12-10T12:33:32.496191+05:30",
+          "durationMs" : 4628,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_006",
+          "index" : 5,
+          "type" : "inputText",
+          "description" : "Input text devicelab",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:32.521541+05:30",
+          "endTime" : "2025-12-10T12:33:35.045986+05:30",
+          "durationMs" : 2524,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_007",
+          "index" : 6,
+          "type" : "tapOn",
+          "description" : "Tap on id: password-input",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:35.047375+05:30",
+          "endTime" : "2025-12-10T12:33:39.076456+05:30",
+          "durationMs" : 4029,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_008",
+          "index" : 7,
+          "type" : "inputText",
+          "description" : "Input text robustest",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:39.09639+05:30",
+          "endTime" : "2025-12-10T12:33:41.459604+05:30",
+          "durationMs" : 2363,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_009",
+          "index" : 8,
+          "type" : "tapOn",
+          "description" : "Tap on id: login-button",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:41.461619+05:30",
+          "endTime" : "2025-12-10T12:33:44.969967+05:30",
+          "durationMs" : 3508,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_010",
+          "index" : 9,
+          "type" : "assertCondition",
+          "description" : "Assert that id: products-screen is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:44.971234+05:30",
+          "endTime" : "2025-12-10T12:33:45.179783+05:30",
+          "durationMs" : 208,
+          "attempts" : 1
+        } ]
+      }, {
+        "id" : "cmd_005_003",
+        "index" : 2,
+        "type" : "assertCondition",
+        "description" : "Assert that \"TestHive\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:33:45.181628+05:30",
+        "endTime" : "2025-12-10T12:33:45.93877+05:30",
+        "durationMs" : 757,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_004",
+        "index" : 3,
+        "type" : "assertCondition",
+        "description" : "Assert that id: products-screen is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:33:45.940097+05:30",
+        "endTime" : "2025-12-10T12:33:46.25453+05:30",
+        "durationMs" : 314,
+        "attempts" : 1
+      } ]
+    } ],
+    "suites" : [ {
+      "suite" : "Valid Login",
+      "status" : "passed",
+      "durationMs" : 0,
+      "tests" : [ {
+        "test" : "Should login with primary credentials",
+        "file" : "login-valid-primary.yaml",
+        "status" : "passed",
+        "durationMs" : 22365,
+        "steps" : [ {
+          "id" : "cmd_005_001",
+          "index" : 0,
+          "type" : "assertCondition",
+          "description" : "Assert that \"Welcome Back\" is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:23.890879+05:30",
+          "endTime" : "2025-12-10T12:33:26.644401+05:30",
+          "durationMs" : 2753,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002",
+          "index" : 1,
+          "type" : "runFlow",
+          "description" : "Run ../common/login.yaml",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:26.646248+05:30",
+          "endTime" : "2025-12-10T12:33:45.180748+05:30",
+          "durationMs" : 18534,
+          "attempts" : 1,
+          "commands" : [ {
+            "id" : "cmd_005_002_001",
+            "index" : 0,
+            "type" : "defineVariables",
+            "description" : "Define variables",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:33:26.647467+05:30",
+            "endTime" : "2025-12-10T12:33:26.648053+05:30",
+            "durationMs" : 0,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_002",
+            "index" : 1,
+            "type" : "unknown",
+            "description" : "Apply configuration",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:33:26.648978+05:30",
+            "endTime" : "2025-12-10T12:33:26.649279+05:30",
+            "durationMs" : 0,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_003",
+            "index" : 2,
+            "type" : "waitForAnimationToEnd",
+            "description" : "Wait for animation to end",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:33:26.649711+05:30",
+            "endTime" : "2025-12-10T12:33:27.699905+05:30",
+            "durationMs" : 1050,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_004",
+            "index" : 3,
+            "type" : "assertCondition",
+            "description" : "Assert that id: username-input is visible",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:33:27.700298+05:30",
+            "endTime" : "2025-12-10T12:33:27.867402+05:30",
+            "durationMs" : 167,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_005",
+            "index" : 4,
+            "type" : "tapOn",
+            "description" : "Tap on id: username-input",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:33:27.868162+05:30",
+            "endTime" : "2025-12-10T12:33:32.496191+05:30",
+            "durationMs" : 4628,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_006",
+            "index" : 5,
+            "type" : "inputText",
+            "description" : "Input text devicelab",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:33:32.521541+05:30",
+            "endTime" : "2025-12-10T12:33:35.045986+05:30",
+            "durationMs" : 2524,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_007",
+            "index" : 6,
+            "type" : "tapOn",
+            "description" : "Tap on id: password-input",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:33:35.047375+05:30",
+            "endTime" : "2025-12-10T12:33:39.076456+05:30",
+            "durationMs" : 4029,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_008",
+            "index" : 7,
+            "type" : "inputText",
+            "description" : "Input text robustest",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:33:39.09639+05:30",
+            "endTime" : "2025-12-10T12:33:41.459604+05:30",
+            "durationMs" : 2363,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_009",
+            "index" : 8,
+            "type" : "tapOn",
+            "description" : "Tap on id: login-button",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:33:41.461619+05:30",
+            "endTime" : "2025-12-10T12:33:44.969967+05:30",
+            "durationMs" : 3508,
+            "attempts" : 1
+          }, {
+            "id" : "cmd_005_002_010",
+            "index" : 9,
+            "type" : "assertCondition",
+            "description" : "Assert that id: products-screen is visible",
+            "status" : "passed",
+            "startTime" : "2025-12-10T12:33:44.971234+05:30",
+            "endTime" : "2025-12-10T12:33:45.179783+05:30",
+            "durationMs" : 208,
+            "attempts" : 1
+          } ]
+        }, {
+          "id" : "cmd_005_003",
+          "index" : 2,
+          "type" : "assertCondition",
+          "description" : "Assert that \"TestHive\" is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:45.181628+05:30",
+          "endTime" : "2025-12-10T12:33:45.93877+05:30",
+          "durationMs" : 757,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_004",
+          "index" : 3,
+          "type" : "assertCondition",
+          "description" : "Assert that id: products-screen is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:45.940097+05:30",
+          "endTime" : "2025-12-10T12:33:46.25453+05:30",
+          "durationMs" : 314,
+          "attempts" : 1
+        } ]
+      } ]
+    } ]
+  }, {
+    "id" : "flow_005",
+    "name" : "Login - Invalid Username",
+    "fileName" : "login-invalid-username.yaml",
+    "appId" : "com.testhiveapp",
+    "tags" : [ "auth", "negative" ],
+    "status" : "passed",
+    "startTime" : "2025-12-10T12:33:46.272374+05:30",
+    "endTime" : "2025-12-10T12:34:08.507854+05:30",
+    "durationMs" : 22235,
+    "commands" : [ {
+      "id" : "cmd_001",
+      "index" : 0,
+      "type" : "defineVariables",
+      "description" : "Define variables",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:33:46.274313+05:30",
+      "endTime" : "2025-12-10T12:33:46.274448+05:30",
+      "durationMs" : 0,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_002",
+      "index" : 1,
+      "type" : "unknown",
+      "description" : "Apply configuration",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:33:46.274791+05:30",
+      "endTime" : "2025-12-10T12:33:46.274904+05:30",
+      "durationMs" : 0,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_003",
+      "index" : 2,
+      "type" : "launchApp",
+      "description" : "Launch app \"com.testhiveapp\" with clear state",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:33:46.275149+05:30",
+      "endTime" : "2025-12-10T12:33:47.271952+05:30",
+      "durationMs" : 996,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_004",
+      "index" : 3,
+      "type" : "suite",
+      "description" : "Suite: Invalid Login",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:33:47.273122+05:30",
+      "endTime" : "2025-12-10T12:33:47.273665+05:30",
+      "durationMs" : 0,
+      "attempts" : 1
+    }, {
+      "id" : "cmd_005",
+      "index" : 4,
+      "type" : "test",
+      "description" : "Test: Should show error for invalid username",
+      "status" : "passed",
+      "startTime" : "2025-12-10T12:33:47.274247+05:30",
+      "endTime" : "2025-12-10T12:34:08.505072+05:30",
+      "durationMs" : 21230,
+      "attempts" : 1,
+      "commands" : [ {
+        "id" : "cmd_005_001",
+        "index" : 0,
+        "type" : "assertCondition",
+        "description" : "Assert that \"Welcome Back\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:33:47.274838+05:30",
+        "endTime" : "2025-12-10T12:33:49.950544+05:30",
+        "durationMs" : 2675,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_002",
+        "index" : 1,
+        "type" : "tapOn",
+        "description" : "Tap on id: username-input",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:33:49.953501+05:30",
+        "endTime" : "2025-12-10T12:33:54.102641+05:30",
+        "durationMs" : 4149,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_003",
+        "index" : 2,
+        "type" : "inputText",
+        "description" : "Input text wronguser",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:33:54.104559+05:30",
+        "endTime" : "2025-12-10T12:33:56.593559+05:30",
+        "durationMs" : 2489,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_004",
+        "index" : 3,
+        "type" : "tapOn",
+        "description" : "Tap on id: password-input",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:33:56.595046+05:30",
+        "endTime" : "2025-12-10T12:34:01.605237+05:30",
+        "durationMs" : 5010,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_005",
+        "index" : 4,
+        "type" : "inputText",
+        "description" : "Input text robustest",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:34:01.606541+05:30",
+        "endTime" : "2025-12-10T12:34:03.991465+05:30",
+        "durationMs" : 2384,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_006",
+        "index" : 5,
+        "type" : "tapOn",
+        "description" : "Tap on id: login-button",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:34:03.992343+05:30",
+        "endTime" : "2025-12-10T12:34:07.571303+05:30",
+        "durationMs" : 3578,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_007",
+        "index" : 6,
+        "type" : "assertCondition",
+        "description" : "Assert that \"Invalid username or password\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:34:07.572897+05:30",
+        "endTime" : "2025-12-10T12:34:08.325695+05:30",
+        "durationMs" : 752,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_008",
+        "index" : 7,
+        "type" : "assertCondition",
+        "description" : "Assert that \"Welcome Back\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:34:08.32706+05:30",
+        "endTime" : "2025-12-10T12:34:08.504155+05:30",
+        "durationMs" : 177,
+        "attempts" : 1
+      } ]
+    } ],
+    "suites" : [ {
+      "suite" : "Invalid Login",
+      "status" : "passed",
+      "durationMs" : 0,
+      "tests" : [ {
+        "test" : "Should show error for invalid username",
+        "file" : "login-invalid-username.yaml",
+        "status" : "passed",
+        "durationMs" : 21230,
+        "steps" : [ {
+          "id" : "cmd_005_001",
+          "index" : 0,
+          "type" : "assertCondition",
+          "description" : "Assert that \"Welcome Back\" is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:47.274838+05:30",
+          "endTime" : "2025-12-10T12:33:49.950544+05:30",
+          "durationMs" : 2675,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002",
+          "index" : 1,
+          "type" : "tapOn",
+          "description" : "Tap on id: username-input",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:49.953501+05:30",
+          "endTime" : "2025-12-10T12:33:54.102641+05:30",
+          "durationMs" : 4149,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_003",
+          "index" : 2,
+          "type" : "inputText",
+          "description" : "Input text wronguser",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:54.104559+05:30",
+          "endTime" : "2025-12-10T12:33:56.593559+05:30",
+          "durationMs" : 2489,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_004",
+          "index" : 3,
+          "type" : "tapOn",
+          "description" : "Tap on id: password-input",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:56.595046+05:30",
+          "endTime" : "2025-12-10T12:34:01.605237+05:30",
+          "durationMs" : 5010,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_005",
+          "index" : 4,
+          "type" : "inputText",
+          "description" : "Input text robustest",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:34:01.606541+05:30",
+          "endTime" : "2025-12-10T12:34:03.991465+05:30",
+          "durationMs" : 2384,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_006",
+          "index" : 5,
+          "type" : "tapOn",
+          "description" : "Tap on id: login-button",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:34:03.992343+05:30",
+          "endTime" : "2025-12-10T12:34:07.571303+05:30",
+          "durationMs" : 3578,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_007",
+          "index" : 6,
+          "type" : "assertCondition",
+          "description" : "Assert that \"Invalid username or password\" is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:34:07.572897+05:30",
+          "endTime" : "2025-12-10T12:34:08.325695+05:30",
+          "durationMs" : 752,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_008",
+          "index" : 7,
+          "type" : "assertCondition",
+          "description" : "Assert that \"Welcome Back\" is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:34:08.32706+05:30",
+          "endTime" : "2025-12-10T12:34:08.504155+05:30",
+          "durationMs" : 177,
+          "attempts" : 1
+        } ]
+      } ]
+    } ]
+  } ],
+  "suites" : [ {
+    "suite" : "Invalid Login",
+    "status" : "passed",
+    "durationMs" : 1,
+    "tests" : [ {
+      "test" : "Should show error for invalid password",
+      "file" : "login-invalid-password.yaml",
+      "status" : "passed",
+      "durationMs" : 22000,
+      "steps" : [ {
+        "id" : "cmd_005_001",
+        "index" : 0,
+        "type" : "assertCondition",
+        "description" : "Assert that \"Welcome Back\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:08.709463+05:30",
+        "endTime" : "2025-12-10T12:32:11.392562+05:30",
+        "durationMs" : 2683,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_002",
+        "index" : 1,
+        "type" : "tapOn",
+        "description" : "Tap on id: username-input",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:11.393216+05:30",
+        "endTime" : "2025-12-10T12:32:15.661797+05:30",
+        "durationMs" : 4268,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_003",
+        "index" : 2,
+        "type" : "inputText",
+        "description" : "Input text devicelab",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:15.662948+05:30",
+        "endTime" : "2025-12-10T12:32:18.293923+05:30",
+        "durationMs" : 2630,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_004",
+        "index" : 3,
+        "type" : "tapOn",
+        "description" : "Tap on id: password-input",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:18.294685+05:30",
+        "endTime" : "2025-12-10T12:32:22.253335+05:30",
+        "durationMs" : 3958,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_005",
+        "index" : 4,
+        "type" : "inputText",
+        "description" : "Input text wrongpassword",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:22.254458+05:30",
+        "endTime" : "2025-12-10T12:32:25.15589+05:30",
+        "durationMs" : 2901,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_006",
+        "index" : 5,
+        "type" : "tapOn",
+        "description" : "Tap on id: login-button",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:25.156898+05:30",
+        "endTime" : "2025-12-10T12:32:29.764599+05:30",
+        "durationMs" : 4607,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_007",
+        "index" : 6,
+        "type" : "assertCondition",
+        "description" : "Assert that \"Invalid username or password\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:29.766496+05:30",
+        "endTime" : "2025-12-10T12:32:30.519442+05:30",
+        "durationMs" : 752,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_008",
+        "index" : 7,
+        "type" : "assertCondition",
+        "description" : "Assert that \"Welcome Back\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:30.522394+05:30",
+        "endTime" : "2025-12-10T12:32:30.706603+05:30",
+        "durationMs" : 184,
+        "attempts" : 1
+      } ]
+    }, {
+      "test" : "Should show error for invalid username",
+      "file" : "login-invalid-username.yaml",
+      "status" : "passed",
+      "durationMs" : 21230,
+      "steps" : [ {
+        "id" : "cmd_005_001",
+        "index" : 0,
+        "type" : "assertCondition",
+        "description" : "Assert that \"Welcome Back\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:33:47.274838+05:30",
+        "endTime" : "2025-12-10T12:33:49.950544+05:30",
+        "durationMs" : 2675,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_002",
+        "index" : 1,
+        "type" : "tapOn",
+        "description" : "Tap on id: username-input",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:33:49.953501+05:30",
+        "endTime" : "2025-12-10T12:33:54.102641+05:30",
+        "durationMs" : 4149,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_003",
+        "index" : 2,
+        "type" : "inputText",
+        "description" : "Input text wronguser",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:33:54.104559+05:30",
+        "endTime" : "2025-12-10T12:33:56.593559+05:30",
+        "durationMs" : 2489,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_004",
+        "index" : 3,
+        "type" : "tapOn",
+        "description" : "Tap on id: password-input",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:33:56.595046+05:30",
+        "endTime" : "2025-12-10T12:34:01.605237+05:30",
+        "durationMs" : 5010,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_005",
+        "index" : 4,
+        "type" : "inputText",
+        "description" : "Input text robustest",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:34:01.606541+05:30",
+        "endTime" : "2025-12-10T12:34:03.991465+05:30",
+        "durationMs" : 2384,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_006",
+        "index" : 5,
+        "type" : "tapOn",
+        "description" : "Tap on id: login-button",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:34:03.992343+05:30",
+        "endTime" : "2025-12-10T12:34:07.571303+05:30",
+        "durationMs" : 3578,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_007",
+        "index" : 6,
+        "type" : "assertCondition",
+        "description" : "Assert that \"Invalid username or password\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:34:07.572897+05:30",
+        "endTime" : "2025-12-10T12:34:08.325695+05:30",
+        "durationMs" : 752,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_008",
+        "index" : 7,
+        "type" : "assertCondition",
+        "description" : "Assert that \"Welcome Back\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:34:08.32706+05:30",
+        "endTime" : "2025-12-10T12:34:08.504155+05:30",
+        "durationMs" : 177,
+        "attempts" : 1
+      } ]
+    } ]
+  }, {
+    "suite" : "Valid Login",
+    "status" : "failed",
+    "durationMs" : 0,
+    "tests" : [ {
+      "test" : "Should login with alternate credentials",
+      "file" : "login-valid-alternate.yaml",
+      "status" : "passed",
+      "durationMs" : 20447,
+      "steps" : [ {
+        "id" : "cmd_005_001",
+        "index" : 0,
+        "type" : "assertCondition",
+        "description" : "Assert that \"Welcome Back\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:31.916823+05:30",
+        "endTime" : "2025-12-10T12:32:35.334175+05:30",
+        "durationMs" : 3417,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_002",
+        "index" : 1,
+        "type" : "runFlow",
+        "description" : "Run ../common/login.yaml",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:35.335986+05:30",
+        "endTime" : "2025-12-10T12:32:51.416437+05:30",
+        "durationMs" : 16080,
+        "attempts" : 1,
+        "commands" : [ {
+          "id" : "cmd_005_002_001",
+          "index" : 0,
+          "type" : "defineVariables",
+          "description" : "Define variables",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:35.3365+05:30",
+          "endTime" : "2025-12-10T12:32:35.336802+05:30",
+          "durationMs" : 0,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_002",
+          "index" : 1,
+          "type" : "unknown",
+          "description" : "Apply configuration",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:35.337514+05:30",
+          "endTime" : "2025-12-10T12:32:35.337932+05:30",
+          "durationMs" : 0,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_003",
+          "index" : 2,
+          "type" : "waitForAnimationToEnd",
+          "description" : "Wait for animation to end",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:35.3388+05:30",
+          "endTime" : "2025-12-10T12:32:36.470181+05:30",
+          "durationMs" : 1131,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_004",
+          "index" : 3,
+          "type" : "assertCondition",
+          "description" : "Assert that id: username-input is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:36.470534+05:30",
+          "endTime" : "2025-12-10T12:32:36.654043+05:30",
+          "durationMs" : 183,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_005",
+          "index" : 4,
+          "type" : "tapOn",
+          "description" : "Tap on id: username-input",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:36.654698+05:30",
+          "endTime" : "2025-12-10T12:32:40.356669+05:30",
+          "durationMs" : 3701,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_006",
+          "index" : 5,
+          "type" : "inputText",
+          "description" : "Input text a",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:40.690337+05:30",
+          "endTime" : "2025-12-10T12:32:42.234463+05:30",
+          "durationMs" : 1544,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_007",
+          "index" : 6,
+          "type" : "tapOn",
+          "description" : "Tap on id: password-input",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:42.23563+05:30",
+          "endTime" : "2025-12-10T12:32:46.199118+05:30",
+          "durationMs" : 3963,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_008",
+          "index" : 7,
+          "type" : "inputText",
+          "description" : "Input text a",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:46.224696+05:30",
+          "endTime" : "2025-12-10T12:32:47.540825+05:30",
+          "durationMs" : 1316,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_009",
+          "index" : 8,
+          "type" : "tapOn",
+          "description" : "Tap on id: login-button",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:47.542545+05:30",
+          "endTime" : "2025-12-10T12:32:51.137356+05:30",
+          "durationMs" : 3594,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_010",
+          "index" : 9,
+          "type" : "assertCondition",
+          "description" : "Assert that id: products-screen is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:51.139182+05:30",
+          "endTime" : "2025-12-10T12:32:51.414995+05:30",
+          "durationMs" : 275,
+          "attempts" : 1
+        } ]
+      }, {
+        "id" : "cmd_005_003",
+        "index" : 2,
+        "type" : "assertCondition",
+        "description" : "Assert that \"TestHive\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:51.417482+05:30",
+        "endTime" : "2025-12-10T12:32:52.066405+05:30",
+        "durationMs" : 648,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_004",
+        "index" : 3,
+        "type" : "assertCondition",
+        "description" : "Assert that id: products-screen is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:52.067773+05:30",
+        "endTime" : "2025-12-10T12:32:52.361424+05:30",
+        "durationMs" : 293,
+        "attempts" : 1
+      } ]
+    }, {
+      "test" : "Should login with alternate credentials. fail as password is wrong",
+      "file" : "login-valid-alternate_failed.yaml",
+      "status" : "failed",
+      "durationMs" : 29234,
+      "error" : "Assertion is false: id: products-screen is visible",
+      "steps" : [ {
+        "id" : "cmd_005_001",
+        "index" : 0,
+        "type" : "assertCondition",
+        "description" : "Assert that \"Welcome Back\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:32:53.57264+05:30",
+        "endTime" : "2025-12-10T12:32:56.296277+05:30",
+        "durationMs" : 2723,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_002",
+        "index" : 1,
+        "type" : "runFlow",
+        "description" : "Run ../common/login.yaml",
+        "status" : "failed",
+        "startTime" : "2025-12-10T12:32:56.29792+05:30",
+        "endTime" : "2025-12-10T12:33:22.805139+05:30",
+        "durationMs" : 26507,
+        "attempts" : 1,
+        "error" : "Assertion is false: id: products-screen is visible",
+        "commands" : [ {
+          "id" : "cmd_005_002_001",
+          "index" : 0,
+          "type" : "defineVariables",
+          "description" : "Define variables",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:56.298894+05:30",
+          "endTime" : "2025-12-10T12:32:56.299354+05:30",
+          "durationMs" : 0,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_002",
+          "index" : 1,
+          "type" : "unknown",
+          "description" : "Apply configuration",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:56.299997+05:30",
+          "endTime" : "2025-12-10T12:32:56.300223+05:30",
+          "durationMs" : 0,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_003",
+          "index" : 2,
+          "type" : "waitForAnimationToEnd",
+          "description" : "Wait for animation to end",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:56.300704+05:30",
+          "endTime" : "2025-12-10T12:32:57.291278+05:30",
+          "durationMs" : 990,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_004",
+          "index" : 3,
+          "type" : "assertCondition",
+          "description" : "Assert that id: username-input is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:57.291679+05:30",
+          "endTime" : "2025-12-10T12:32:57.456659+05:30",
+          "durationMs" : 164,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_005",
+          "index" : 4,
+          "type" : "tapOn",
+          "description" : "Tap on id: username-input",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:32:57.457122+05:30",
+          "endTime" : "2025-12-10T12:33:01.379893+05:30",
+          "durationMs" : 3922,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_006",
+          "index" : 5,
+          "type" : "inputText",
+          "description" : "Input text a",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:01.405419+05:30",
+          "endTime" : "2025-12-10T12:33:02.926941+05:30",
+          "durationMs" : 1521,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_007",
+          "index" : 6,
+          "type" : "tapOn",
+          "description" : "Tap on id: password-input",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:02.928332+05:30",
+          "endTime" : "2025-12-10T12:33:06.907172+05:30",
+          "durationMs" : 3978,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_008",
+          "index" : 7,
+          "type" : "inputText",
+          "description" : "Input text b",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:06.931669+05:30",
+          "endTime" : "2025-12-10T12:33:08.28628+05:30",
+          "durationMs" : 1354,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_009",
+          "index" : 8,
+          "type" : "tapOn",
+          "description" : "Tap on id: login-button",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:08.288233+05:30",
+          "endTime" : "2025-12-10T12:33:11.870621+05:30",
+          "durationMs" : 3582,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_010",
+          "index" : 9,
+          "type" : "assertCondition",
+          "description" : "Assert that id: products-screen is visible",
+          "status" : "failed",
+          "startTime" : "2025-12-10T12:33:11.871671+05:30",
+          "endTime" : "2025-12-10T12:33:22.803418+05:30",
+          "durationMs" : 10931,
+          "attempts" : 1,
+          "error" : "Assertion is false: id: products-screen is visible",
+          "screenshot" : "screenshots/screenshot-1765350202798-failed.png"
+        } ]
+      } ]
+    }, {
+      "test" : "Should login with primary credentials",
+      "file" : "login-valid-primary.yaml",
+      "status" : "passed",
+      "durationMs" : 22365,
+      "steps" : [ {
+        "id" : "cmd_005_001",
+        "index" : 0,
+        "type" : "assertCondition",
+        "description" : "Assert that \"Welcome Back\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:33:23.890879+05:30",
+        "endTime" : "2025-12-10T12:33:26.644401+05:30",
+        "durationMs" : 2753,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_002",
+        "index" : 1,
+        "type" : "runFlow",
+        "description" : "Run ../common/login.yaml",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:33:26.646248+05:30",
+        "endTime" : "2025-12-10T12:33:45.180748+05:30",
+        "durationMs" : 18534,
+        "attempts" : 1,
+        "commands" : [ {
+          "id" : "cmd_005_002_001",
+          "index" : 0,
+          "type" : "defineVariables",
+          "description" : "Define variables",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:26.647467+05:30",
+          "endTime" : "2025-12-10T12:33:26.648053+05:30",
+          "durationMs" : 0,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_002",
+          "index" : 1,
+          "type" : "unknown",
+          "description" : "Apply configuration",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:26.648978+05:30",
+          "endTime" : "2025-12-10T12:33:26.649279+05:30",
+          "durationMs" : 0,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_003",
+          "index" : 2,
+          "type" : "waitForAnimationToEnd",
+          "description" : "Wait for animation to end",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:26.649711+05:30",
+          "endTime" : "2025-12-10T12:33:27.699905+05:30",
+          "durationMs" : 1050,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_004",
+          "index" : 3,
+          "type" : "assertCondition",
+          "description" : "Assert that id: username-input is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:27.700298+05:30",
+          "endTime" : "2025-12-10T12:33:27.867402+05:30",
+          "durationMs" : 167,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_005",
+          "index" : 4,
+          "type" : "tapOn",
+          "description" : "Tap on id: username-input",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:27.868162+05:30",
+          "endTime" : "2025-12-10T12:33:32.496191+05:30",
+          "durationMs" : 4628,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_006",
+          "index" : 5,
+          "type" : "inputText",
+          "description" : "Input text devicelab",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:32.521541+05:30",
+          "endTime" : "2025-12-10T12:33:35.045986+05:30",
+          "durationMs" : 2524,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_007",
+          "index" : 6,
+          "type" : "tapOn",
+          "description" : "Tap on id: password-input",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:35.047375+05:30",
+          "endTime" : "2025-12-10T12:33:39.076456+05:30",
+          "durationMs" : 4029,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_008",
+          "index" : 7,
+          "type" : "inputText",
+          "description" : "Input text robustest",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:39.09639+05:30",
+          "endTime" : "2025-12-10T12:33:41.459604+05:30",
+          "durationMs" : 2363,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_009",
+          "index" : 8,
+          "type" : "tapOn",
+          "description" : "Tap on id: login-button",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:41.461619+05:30",
+          "endTime" : "2025-12-10T12:33:44.969967+05:30",
+          "durationMs" : 3508,
+          "attempts" : 1
+        }, {
+          "id" : "cmd_005_002_010",
+          "index" : 9,
+          "type" : "assertCondition",
+          "description" : "Assert that id: products-screen is visible",
+          "status" : "passed",
+          "startTime" : "2025-12-10T12:33:44.971234+05:30",
+          "endTime" : "2025-12-10T12:33:45.179783+05:30",
+          "durationMs" : 208,
+          "attempts" : 1
+        } ]
+      }, {
+        "id" : "cmd_005_003",
+        "index" : 2,
+        "type" : "assertCondition",
+        "description" : "Assert that \"TestHive\" is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:33:45.181628+05:30",
+        "endTime" : "2025-12-10T12:33:45.93877+05:30",
+        "durationMs" : 757,
+        "attempts" : 1
+      }, {
+        "id" : "cmd_005_004",
+        "index" : 3,
+        "type" : "assertCondition",
+        "description" : "Assert that id: products-screen is visible",
+        "status" : "passed",
+        "startTime" : "2025-12-10T12:33:45.940097+05:30",
+        "endTime" : "2025-12-10T12:33:46.25453+05:30",
+        "durationMs" : 314,
+        "attempts" : 1
+      } ]
+    } ]
+  } ]
+}

@@ -1,0 +1,17 @@
+# Search for a product
+# Parameters:
+#   - searchTerm (required)
+
+appId: com.testhiveapp
+---
+- tapOn:
+    id: "search-input"
+
+- eraseText
+
+- inputText: ${searchTerm}
+
+- hideKeyboard
+
+# Wait for search results
+- waitForAnimationToEnd

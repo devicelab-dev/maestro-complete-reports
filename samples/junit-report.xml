@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="5" failures="1" skipped="0" errors="0" time="0.001">
+  <testsuite name="Invalid Login" tests="2" failures="0" skipped="0" errors="0" time="0.001" timestamp="2025-12-10T12:32:03.794139+05:30">
+    <testcase name="Should show error for invalid password" classname="login-invalid-password.yaml" time="22.0">
+      <properties>
+        <property name="file" value="login-invalid-password.yaml"/>
+        <property name="device.name" value="11171JEC200939"/>
+        <property name="device.id" value="11171JEC200939"/>
+        <property name="device.platform" value="android"/>
+      </properties>
+    </testcase>
+    <testcase name="Should show error for invalid username" classname="login-invalid-username.yaml" time="21.23">
+      <properties>
+        <property name="file" value="login-invalid-username.yaml"/>
+        <property name="device.name" value="11171JEC200939"/>
+        <property name="device.id" value="11171JEC200939"/>
+        <property name="device.platform" value="android"/>
+      </properties>
+    </testcase>
+  </testsuite>
+  <testsuite name="Valid Login" tests="3" failures="1" skipped="0" errors="0" time="0.0" timestamp="2025-12-10T12:32:03.794139+05:30">
+    <testcase name="Should login with alternate credentials" classname="login-valid-alternate.yaml" time="20.447">
+      <properties>
+        <property name="file" value="login-valid-alternate.yaml"/>
+        <property name="device.name" value="11171JEC200939"/>
+        <property name="device.id" value="11171JEC200939"/>
+        <property name="device.platform" value="android"/>
+      </properties>
+    </testcase>
+    <testcase name="Should login with alternate credentials. fail as password is wrong" classname="login-valid-alternate_failed.yaml" time="29.234">
+      <properties>
+        <property name="file" value="login-valid-alternate_failed.yaml"/>
+        <property name="device.name" value="11171JEC200939"/>
+        <property name="device.id" value="11171JEC200939"/>
+        <property name="device.platform" value="android"/>
+      </properties>
+      <failure message="Assertion is false: id: products-screen is visible">Assertion is false: id: products-screen is visible</failure>
+    </testcase>
+    <testcase name="Should login with primary credentials" classname="login-valid-primary.yaml" time="22.365">
+      <properties>
+        <property name="file" value="login-valid-primary.yaml"/>
+        <property name="device.name" value="11171JEC200939"/>
+        <property name="device.id" value="11171JEC200939"/>
+        <property name="device.platform" value="android"/>
+      </properties>
+    </testcase>
+  </testsuite>
+</testsuites>

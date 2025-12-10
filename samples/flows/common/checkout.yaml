@@ -1,0 +1,49 @@
+# Complete checkout process
+# Simplified checkout - only essential fields
+
+appId: com.testhiveapp
+---
+# Start from cart screen
+- tapOn:
+    id: "checkout-button"
+
+# Fill shipping address (only 3 fields in the app)
+- assertVisible:
+    id: "address-screen"
+
+- tapOn:
+    id: "address-input"
+- inputText: ${address}
+
+- tapOn:
+    id: "city-input"
+- inputText: ${city}
+
+- tapOn:
+    id: "zip-input"
+- inputText: ${zipcode}
+
+# Wait for form to be ready and button to be enabled
+- waitForAnimationToEnd
+- assertVisible: "Next: Payment"
+
+- tapOn: "Next: Payment"
+
+# Wait for navigation to payment screen
+- waitForAnimationToEnd
+
+# Fill payment information (only card number in the app)
+- assertVisible:
+    id: "payment-screen"
+
+- tapOn:
+    id: "card-number-input"
+- inputText: ${cardnumber}
+
+- tapOn: "Pay Now"
+
+# Wait for checkout success
+- extendedWaitUntil:
+    visible:
+      id: "checkout-success-screen"
+    timeout: 5000

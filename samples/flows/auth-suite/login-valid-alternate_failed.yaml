@@ -1,0 +1,22 @@
+appId: com.testhiveapp
+name: "Login - Valid Alternate Credentials"
+tags:
+  - auth
+  - smoke
+---
+- launchApp:
+    clearState: true
+
+- suite: "Valid Login"
+
+- test: "Should login with alternate credentials. fail as password is wrong"
+  steps:
+    - assertVisible: "Welcome Back"
+    - runFlow:
+        file: ../common/login.yaml
+        env:
+          username: a
+          password: b
+    - assertVisible: "TestHive"
+    - assertVisible:
+        id: "products-screen"

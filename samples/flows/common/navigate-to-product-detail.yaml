@@ -1,0 +1,17 @@
+# Navigate to product detail
+# Parameters:
+#   - productId (required)
+#   - productName (optional, for verification)
+
+appId: com.testhiveapp
+---
+- tapOn:
+    id: "product-item-${productId}"
+
+- assertVisible:
+    id: "product-detail-screen"
+
+# Verify correct product if name provided
+- assertVisible:
+    text: ${productName}
+    optional: true

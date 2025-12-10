@@ -1,0 +1,22 @@
+appId: com.testhiveapp
+name: "Login - Valid Primary Credentials"
+tags:
+  - auth
+  - smoke
+---
+- launchApp:
+    clearState: true
+
+- suite: "Valid Login"
+
+- test: "Should login with primary credentials"
+  steps:
+    - assertVisible: "Welcome Back"
+    - runFlow:
+        file: ../common/login.yaml
+        env:
+          username: devicelab
+          password: robustest
+    - assertVisible: "TestHive"
+    - assertVisible:
+        id: "products-screen"

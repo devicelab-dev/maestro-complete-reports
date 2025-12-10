@@ -1,0 +1,28 @@
+# Reusable login flow
+# Parameters passed via env when calling runFlow
+
+appId: com.testhiveapp
+---
+# Wait for login screen to be ready
+- waitForAnimationToEnd
+- extendedWaitUntil:
+    visible:
+      id: "username-input"
+    timeout: 5000
+
+- tapOn:
+    id: "username-input"
+- inputText: ${username}
+
+- tapOn:
+    id: "password-input"
+- inputText: ${password}
+
+- tapOn:
+    id: "login-button"
+
+# Wait for products screen to confirm login success
+- extendedWaitUntil:
+    visible:
+      id: "products-screen"
+    timeout: 10000

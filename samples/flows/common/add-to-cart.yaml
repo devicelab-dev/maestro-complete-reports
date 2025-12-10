@@ -1,0 +1,11 @@
+# Add product to cart
+# Parameters:
+#   - productId (required)
+# NOTE: This is a sub-flow, not meant to be run independently
+
+appId: com.testhiveapp
+---
+# Simply tap the add to cart button for the product
+# Each tap adds one item to cart
+- tapOn:
+    id: "add-to-cart-button-${productId}"
