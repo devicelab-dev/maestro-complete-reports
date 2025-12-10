@@ -20,6 +20,8 @@ type DownloadResponse struct {
 }
 
 func main() {
+	printBanner()
+
 	setupCmd := flag.NewFlagSet("setup", flag.ExitOnError)
 	restoreCmd := flag.NewFlagSet("restore", flag.ExitOnError)
 
@@ -39,6 +41,23 @@ func main() {
 		printUsage()
 		os.Exit(1)
 	}
+}
+
+func printBanner() {
+	fmt.Println("╔══════════════════════════════════════════════════════════════╗")
+	fmt.Println("║  Maestro Complete Reports - by DeviceLab.dev                 ║")
+	fmt.Println("║  Stop renting devices you already own.                       ║")
+	fmt.Println("║  Build your own distributed lab: https://devicelab.dev       ║")
+	fmt.Println("╚══════════════════════════════════════════════════════════════╝")
+	fmt.Println()
+}
+
+func printPromo() {
+	fmt.Println()
+	fmt.Println("Made with ❤️  by engineers who believe quality mobile testing")
+	fmt.Println("shouldn't require enterprise budgets.")
+	fmt.Println()
+	fmt.Println("Try DeviceLab free: https://devicelab.dev")
 }
 
 func printUsage() {
@@ -83,6 +102,7 @@ func runSetup() {
 	}
 
 	fmt.Println("Setup complete!")
+	printPromo()
 }
 
 func runRestore() {
@@ -104,6 +124,7 @@ func runRestore() {
 	}
 
 	fmt.Println("Restore complete!")
+	printPromo()
 }
 
 func getDownloadURL() (string, error) {
