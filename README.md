@@ -61,7 +61,6 @@ maestro test flows/ --report-dir report_folder
 |--------|--------|
 | JSON | [report.json](samples/report.json) |
 | JUnit XML | [junit-report.xml](samples/junit-report.xml) |
-| Sample Flows | [samples/flows/](samples/flows/) |
 
 ### Console Output
 
@@ -97,7 +96,7 @@ Tests:  4 passed, 1 failed
 
 ### HTML Report
 
-![HTML Report](assets/html-report.png)
+![HTML Report](https://github.com/devicelab-dev/maestro-complete-reports/raw/main/assets/html-report.png)
 
 ## Documentation
 

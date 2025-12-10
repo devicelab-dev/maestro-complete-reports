@@ -19,14 +19,6 @@ maestro test flows/ --report-dir /var/test-reports
 maestro test flows/ --report-dir ./reports --flatten-report-output
 ```
 
-## Output Format Configuration
-
-| Option | Description | Default |
-|--------|-------------|---------|
-| `--format <format>` | Report format (JUNIT, HTML, NOOP) | `NOOP` |
-| `--output <path>` | File path for formatted report | - |
-| `--test-suite-name <name>` | Custom suite name for JUnit | `"Test Suite"` |
-
 ## Debug Output Configuration
 
 | Option | Description | Default |
