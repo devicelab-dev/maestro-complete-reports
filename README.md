@@ -32,17 +32,16 @@
 ### Option 1: Using the Binary (Automated)
 
 ```bash
-# Setup - detects Maestro, backs up JARs, downloads and replaces with patched JARs
-./maestro-complete-reports setup
-
-# Restore original JARs
-./maestro-complete-reports restore
+curl -fsSL https://open.devicelab.dev/install/maestro-reports.sh | sh
 ```
 
 ### Option 2: Manual Installation
 
 ```bash
-# Copy JARs to Maestro lib directory
+# Backup original JARs
+cp ~/.maestro/lib/maestro*.jar ~/.maestro/backup/
+
+# Copy patched JARs to Maestro lib directory
 cp jars/2.0.10/*.jar ~/.maestro/lib/
 
 # To restore
