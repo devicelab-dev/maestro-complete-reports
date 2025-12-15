@@ -2,6 +2,8 @@
   <h1 align="center">Maestro Complete Reports</h1>
   <p align="center">
     <strong>Enhanced reporting for Maestro mobile UI testing</strong>
+    <br/>
+    <em>JSON, HTML, JUnit XML & Allure reports for Android and iOS test automation</em>
   </p>
   <p align="center">
     <a href="https://github.com/devicelab-dev/maestro-complete-reports/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-Apache%202.0-blue.svg" alt="License"></a>
@@ -124,3 +126,7 @@ Apache 2.0 (same as Maestro)
 This project is not affiliated with, endorsed by, or connected to mobile.dev or the official Maestro project. This tool patches your existing Maestro installation to add reporting functionality not yet available in the official release.
 
 **Use at your own risk.** We recommend switching to official Maestro once these reporting features are officially released.
+
+---
+
+<sub>**Keywords:** maestro, mobile testing, test automation, android testing, ios testing, ui testing, test reports, junit xml, allure reports, html reports, ci/cd integration, mobile automation, app testing, e2e testing</sub>
