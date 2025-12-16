@@ -129,4 +129,3 @@ This project is not affiliated with, endorsed by, or connected to mobile.dev or 
 
 ---
 
-<sub>**Keywords:** maestro, mobile testing, test automation, android testing, ios testing, ui testing, test reports, junit xml, allure reports, html reports, ci/cd integration, mobile automation, app testing, e2e testing</sub>
