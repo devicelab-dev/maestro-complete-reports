@@ -14,6 +14,8 @@
 
 ---
 
+**Update:** We built [maestro-runner](https://github.com/devicelab-dev/maestro-runner) from scratch — 3.6x faster, runs locally or on any Appium cloud provider, true parallel execution, no features behind paywalls. Addresses 78% of Maestro's top open issues. Same YAML.
+
 > **Community Build** - Not affiliated with Maestro or mobile.dev
 >
 > Built by [DeviceLab.dev](https://devicelab.dev) - Turn Your Devices Into a Distributed Device Lab
