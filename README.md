@@ -12,9 +12,23 @@
   </p>
 </p>
 
----
-
-**Update:** We built [maestro-runner](https://github.com/devicelab-dev/maestro-runner) from scratch — 3.6x faster, runs locally or on any Appium cloud provider, true parallel execution, no features behind paywalls. Addresses 78% of Maestro's top open issues. Same YAML.
+> 🚀 **Looking for more than just better report?**
+>
+> **[maestro-runner](https://github.com/devicelab-dev/maestro-runner)** includes everything `Maestro Complete Reports` does — **3.6x faster, 14x less memory** (single binary, no JVM startup).
+>
+> - ✅ **Real iOS devices** — built-in, no patching needed
+> - ✅ **Android emulators, simulators & real devices**
+> - ✅ **Parallel execution** — dynamic work distribution across devices
+> - ✅ **CI/CD ready** — instant cold starts, GitHub Actions / GitLab / Jenkins
+> - ✅ **Cloud testing** — BrowserStack, Sauce Labs, LambdaTest via Appium
+> - ✅ **Zero migration** — runs your existing Maestro YAML flows as-is
+>
+> ```bash
+> curl -fsSL https://open.devicelab.dev/install/maestro-runner | bash
+> maestro-runner --platform ios test flow.yaml
+> ```
+>
+> 👉 **[Install maestro-runner →](https://github.com/devicelab-dev/maestro-runner)**
 
 > **Community Build** - Not affiliated with Maestro or mobile.dev
 >
